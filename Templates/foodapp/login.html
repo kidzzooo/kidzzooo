@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  {% load static %}
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'css/logstyle.css' %}">
+  </head>
+  <body>
+<div class="login-box" style="">
+  <h1>Login</h1>
+  <form class="login-form" action="dologin" method="post">
+  {% csrf_token %}
+  <div class="textbox">
+    <i class="fas fa-user"></i>
+    <input type="text" name="userId" placeholder="Username">
+  </div>
+
+  <div class="textbox">
+    <i class="fas fa-lock"></i>
+    <input type="password" name="userpass" placeholder="Password">
+  </div>
+	<div style="float:right;margin-right:0px;">
+	<input type="radio" name="type" value="User" checked="true">
+  <input type="radio" value="Admin" name="type">
+  </div>
+  <input type="submit" class="btn" style="color:white;" value="Log in">
+  </form>
+</div>
+  <!-- Start of ChatBot (www.chatbot.com) code -->
+<script type="text/javascript">
+    window.__be = window.__be || {};
+    window.__be.id = "655e363ef86b490007295906";
+    (function() {
+        var be = document.createElement('script'); be.type = 'text/javascript'; be.async = true;
+        be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
+    })();
+</script>
+<noscript>You need to <a href="https://www.chatbot.com/help/chat-widget/enable-javascript-in-your-browser/" rel="noopener nofollow">enable JavaScript</a> in order to use the AI chatbot tool powered by <a href="https://www.chatbot.com/" rel="noopener nofollow" target="_blank">ChatBot</a></noscript>
+<!-- End of ChatBot code -->
+  </body>
+</html>
